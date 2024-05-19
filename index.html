@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     Задание 1
+    // Создать переменные num1, num2 которые пользователь вводит с клавиатуры
+    // Проверьте, что переменная num1 равна или меньше 1, а переменная num2 больше или равна 3.
+
+        let num1 = +prompt("Введите число num1: ");
+        let num2 = +prompt("Введите число num2: ");
+
+        if (num1 <= 1) {
+            console.log("Число num1 введено верно!");
+        } else {
+            console.log("Число num1 больше единицы!");
+        }
+
+        if (num2 >= 3){
+            console.log("Число num2 введено верно!");
+        }else{
+            console.log("Число num2  меньше трех!");
+        }
+
+        // Задание 3
+        // Перепишите код к тернарному оператору
+        // if (test === true) {
+        // console.log('+++');
+        // } else {
+        // console.log('---');
+        // }
+        
+        let test = true;
+        console.log(test?"+++":"---");
+
+        // Задание 3
+        // В переменной day лежит какое-то число из интервала от 1 до 31. 
+        // Определите в какую декаду месяца попадает это число (в первую, вторую или третью).
+
+        let day = +prompt("Введите дату:");
+
+        if (day > 0 && day <= 10) {
+            console.log("Сейчас первая декада месяца!");
+        } else if(day > 10 && day <= 20) {
+            console.log("Сейчас вторая декада месяца!");
+        } else if(day > 20 && day <= 31){
+            console.log("Сейчас третья декада месяца!");
+        }else{
+            console.log("Введена неверная дата!")
+        }
+
+        //         Задание 4
+        // Необязательное задание. (Если вам показалось домашнее задание простым, выполняем данный пункт)
+        // (Для решения задания вам потребуется оператор остаток от деления %, например 10%3 === 1 , 
+        // десять разделить на 3, остаток 1, второй пример 7 % 5, 
+        // тут остаток от деления будет 2, ну и 3 пример это 14 % 10 === 4, остаток от деления на 10 будет равен 4)
+
+        let number = +prompt("Введите число:");
+
+        const firstNumber = number % 10;
+        number = number / 10;
+        const secondNumber = number % 10;
+        number = number / 10;
+        const thirdNumber = number % 10;
+
+        console.log(`В вашем числе: ${thirdNumber} сотен, ${secondNumber} десятков, ${firstNumber} единиц.`);
+        
+    </script>
+</body>
+</html>
